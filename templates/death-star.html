@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Star Wars Spaceships
+{% endblock %}
+
+{% block main %}
+    <div id="hero">
+        <img src="../static/images/death-star/star-wars.svg" alt="Star Wars" id="title">
+        <h2 class="text-white" id="subtitle">3D Models & Blueprints</h2>
+        <img src="../static/images/death-star/home.svg" alt="crosshairs" class="crosshairs" id="crosshairs">
+    </div>
+    <video muted autoplay loop>
+        <source src="../static/images/death-star/video/hero-desktop.mp4"
+        type="video/mp4">
+    </video>
+{% endblock %}

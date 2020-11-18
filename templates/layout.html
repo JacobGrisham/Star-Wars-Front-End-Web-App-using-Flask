@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../static/favicon/site.webmanifest">
+        <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- LINKS -->
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/styles.css" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+      <main>
+        {% block main %}{% endblock %}
+      </main>
+      <!-- Navigation/Modal -->
+      <footer>
+      <img src="../static/images/navigation/modal-button-outline.svg" alt="modal button outline" class="modal-button-outline">
+      <button class="open-modal" data-open="modal1"></button>
+          <div class="modal" id="modal1">
+              <nav class="navigation">
+                  <img src="../static/images/navigation/nav.svg" alt="nav" class="nav">
+                  <div class="nav-grid">
+                      <a href="/millennium-falcon-model"><img src="../static/images/millennium-falcon/mf-icon.svg" alt="millenium falcon link" class="link"></a>
+                      <a href="/star-destroyer-model"><img src="../static/images/star-destroyer/sd-icon.svg" alt="star destroyer link" class="link"></a>
+                      <a href="/tie-fighter-model"><img src="../static/images/tie-fighter/tf-icon.svg" alt="tie fighter link" class="link"></a>
+                      <a href="/"><img src="../static/images/death-star/ds-icon.svg" alt="home link" class="link"></a>
+                  </div>
+                </nav>
+              <button class="close-modal" aria-label="close modal" data-close>✕</button>
+          </div>
+      </footer>
+    </body>
+    <script src="../static/js/index.js"></script>
+</html>

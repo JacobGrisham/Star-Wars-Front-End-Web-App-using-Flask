@@ -1,0 +1,400 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(0,0,0);
+    cursor: url(images/base/cursor.svg), auto;
+}
+
+::selection {
+    background-color: rgb(200, 200, 200);
+}
+
+/*--------------------------*/
+/* MODAL AND NAVIGATION */
+/*--------------------------*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+/* Modal Button Outline */
+.modal-button-outline {
+    width: 7rem;
+    height: auto;
+}
+
+.open-modal {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+    position: relative;
+    top: 22px;
+    right: 80px;
+}
+
+.open-modal:hover {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+.open-modal:focus,
+.open-modal:active {
+    animation: blink .2s 2;
+    outline: none;
+}
+
+@keyframes blink {
+    from {
+        background-color: rgb(100, 100, 100);
+    }
+    to {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(10, 10, 10, 0.9);
+    cursor: url(images/base/pointer.svg), pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.close-modal {
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 49.8%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.close-modal:hover {
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+.close-modal:active,
+.close-modal:focus {
+    outline: none;
+}
+
+/* Navigation */
+.navigation {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 100%;
+    background: rgb(10, 10, 10);
+    cursor: url(images/base/cursor.svg), default;
+}
+
+.link {
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+.link:hover {
+    width: 5rem;
+}
+
+.nav {
+    position: absolute;
+    top: 49.5%;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 15rem 15rem;
+    justify-items: center;
+    align-items: center;
+    top: 13%;
+    left: 12%;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        width: 30rem;
+        height: 30rem;
+    }
+    .nav {
+        width: 20rem;
+        height: 20rem;
+    }
+    .nav-grid {
+        grid-template-columns: 8rem 8rem;
+        grid-template-rows: 8rem 8rem;
+        top: 22%;
+        left: 23%;
+    }
+}
+
+/*--------------------------*/
+/* INDEX PAGE*/
+/*--------------------------*/
+
+#title {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 15%;
+    z-index: 3;
+}
+
+#subtitle {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    #subtitle {
+        font-size: 1rem;
+        letter-spacing: 10px;
+    }
+}
+
+.crosshairs {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 25rem;
+    height: auto;
+}
+
+#crosshairs {
+    top: 2.5%;
+}
+
+video {
+    width: 100vw;
+    height: auto;
+}
+
+/*--------------------------*/
+/* MODEL PAGES*/
+/*--------------------------*/
+
+.model-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.model-mobile-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.model {
+    width: 640px;
+    height: 480px;
+}
+
+.starship-title {
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 15px;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    animation: moveInLeft 2s ease-in;
+}
+
+@keyframes moveInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80%{
+    opacity: 1;
+    transform: translateX(1rem);
+  }
+  100%{
+    transform: translate(0)
+  }
+
+}
+
+.icon {
+    position: absolute;
+    right: 13%;
+    bottom: 20%;
+    z-index: 2;
+    width: 7rem;
+    height: auto;
+}
+
+#mf-icon {
+    right: 10%;
+    bottom: 15%;
+}
+
+.icon:hover {
+    background-image: url(images/base/small-grid.svg);
+    border: 4px solid white;
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 20s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.symbol {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    z-index: -3;
+    width: 400px;
+    height: auto;
+}
+
+.symbol-color {
+    animation: pulse 5s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        fill: rgb(85, 85, 85);
+    }
+    50% {
+        fill: rgb(120, 120, 120);
+    }
+    100% {
+        fill: rgb(85, 85, 85);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .model {
+        width: 600px;
+        height: 440px;
+        top: -10%;
+    }
+    .starship-title {
+        font-size: 2rem;
+        letter-spacing: 10px;
+    }
+    .icon {
+        width: 6rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .model {
+        width: 480px;
+        height: 320px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+        .model-background {
+        display: none;
+    }
+    .model-mobile-background {
+        display: block;
+    }
+    .icon {
+        right: 17%;
+        bottom: 11%;
+    }
+    #mf-icon {
+        right: 22%;
+        bottom: 6%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .model {
+        width: 400px;
+        height: 240px;
+    }
+    .starship-title {
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+    }
+    .symbol {
+         width: 300px;
+    }
+}
+
+/*--------------------------*/
+/*BLUEPRINT PAGES*/
+/*--------------------------*/
+
+.aurebesh {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.blueprint-background {
+    background-image: url(images/base/grid.png);
+}
+
+.blueprint {
+    height: 100vh;
+    width: auto
+}
