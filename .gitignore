@@ -1,12 +1,2 @@
 __pycache__
 .vscode
-*.mp4
-static/favicon/**
-static/images/base/**
-static/images/death-star/**
-static/images/millennium-falcon/**
-static/images/navigation/**
-static/images/star-destroyer/**
-static/images/tie-fighter/**
-browserconfig.xml
-favicon.ico
