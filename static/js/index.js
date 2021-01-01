@@ -31,3 +31,9 @@ document.addEventListener("keyup", e => {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
+
+// Play Sounds When Clicked
+function play(name) {
+  let sound = new Audio("static/sounds/" + name + "-sound.mp3");
+  sound.play()
+};

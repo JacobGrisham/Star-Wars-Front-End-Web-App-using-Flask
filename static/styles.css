@@ -5,7 +5,20 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: rgb(0,0,0);
+    font-family: 'Prompt', sans-serif;
+    color: white;
     cursor: url(images/base/cursor.svg), auto;
+}
+
+@import url(//db.onlinewebfonts.com/c/c2ff4837879a9b9bbca094b63bdb01c0?family=Aurebesh+AF);
+@font-face {
+    font-family: "Aurebesh AF";
+    src: url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.eot");
+    src: url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/c2ff4837879a9b9bbca094b63bdb01c0.svg#Aurebesh AF") format("svg");
 }
 
 ::selection {
@@ -19,7 +32,7 @@ body {
 footer {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
 }
@@ -37,7 +50,7 @@ footer {
     outline: none;
     width: 3rem;
     height: 3rem;
-    z-index: 2;
+    z-index: 100;
     position: relative;
     top: 22px;
     right: 80px;
@@ -70,11 +83,12 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.95);
     cursor: url(images/base/pointer.svg), pointer;
     visibility: hidden;
     opacity: 0;
@@ -118,11 +132,15 @@ footer {
 }
 
 .link {
+    height: auto;
+    width: 4rem;
     cursor: url(images/base/pointer.svg), pointer;
 }
 
 .link:hover {
-    width: 5rem;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 20s linear forwards;
 }
 
 .nav {
@@ -172,7 +190,7 @@ footer {
     left: 0;
     right: 0;
     top: 15%;
-    z-index: 3;
+    z-index: 10;
 }
 
 #subtitle {
@@ -182,10 +200,10 @@ footer {
     left: 0;
     right: 0;
     top: 25%;
-    font-family: 'Prompt', sans-serif;
     letter-spacing: 20px;
     text-transform: uppercase;
     text-align: center;
+    color: white;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -222,7 +240,7 @@ video {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: -10;
     height: 100%;
     width: 100%;
 }
@@ -231,20 +249,46 @@ video {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: -10;
     height: 100%;
     width: 100%;
     display: none;
 }
 
+.volume {
+    transform: translateX(1rem);
+    height: auto;
+    width: 6%;
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+.target-model {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .model {
+    margin: 0 auto;
     width: 640px;
     height: 480px;
 }
 
+.target {
+    animation: target infinite 15s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
+
 .starship-title {
     text-transform: uppercase;
-    font-family: 'Prompt', sans-serif;
     letter-spacing: 15px;
     display: flex;
     position: absolute;
@@ -272,7 +316,7 @@ video {
     position: absolute;
     right: 13%;
     bottom: 20%;
-    z-index: 2;
+    z-index: 10;
     width: 7rem;
     height: auto;
 }
@@ -300,11 +344,15 @@ video {
   }
 }
 
+.specs {
+    text-transform: uppercase;
+}
+
 .symbol {
     position: absolute;
     left: -100px;
     bottom: 0;
-    z-index: -3;
+    z-index: -100;
     width: 400px;
     height: auto;
 }
@@ -381,10 +429,10 @@ video {
 }
 
 /*--------------------------*/
-/*BLUEPRINT PAGES*/
+/* BLUEPRINT PAGES */
 /*--------------------------*/
 
-.aurebesh {
+.Areubesh {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -397,4 +445,49 @@ video {
 .blueprint {
     height: 100vh;
     width: auto
+}
+
+/*--------------------------*/
+/* 404 */
+/*--------------------------*/
+#error {
+    text-align: center;
+}
+
+#r2d2 {
+    height:auto;
+    width: 8rem;
+    position: absolute;
+    right: -20%;
+    animation: slide-left 12s cubic-bezier(.33,1.26,.68,1) infinite;
+    cursor: url(images/base/pointer.svg), pointer;
+}
+
+/* Not Working... */
+#r2D2:hover {
+    animation-play-state: paused;
+}
+
+@media only screen and (max-width: 768px) {
+    #r2d2 {
+        animation: slide-left 6s cubic-bezier(.33,1.26,.68,1) infinite;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        right: -20%;
+    }
+
+    50% {
+        right: 60%;
+    }
+
+    60% {
+        right: 60%;
+    }
+  
+    100% {
+        right: 100%;
+    }
 }
