@@ -1,4 +1,6 @@
 # [Star Wars 3D Models & Blueprints: Front End Web App using Flask](https://star-wars-3d-models-blueprints.herokuapp.com/)
+[![Updates](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
+[![Python 3](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/python-3-shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 ### Homework from [Harvard's Introduction to Computer Science CS50 hosted on eDX](https://www.edx.org/course/cs50s-introduction-to-computer-science)
 ### 🎓 [Web Track](https://cs50.harvard.edu/x/2020/tracks/web/)
 - [Homepage](https://cs50.harvard.edu/x/2020/tracks/web/homepage/): Tasked to build a simple homepage using HTML, CSS, and JavaScript. I took this as an opportunity to go beyond this by practicing design and using advanced CSS mehtods.
@@ -7,7 +9,8 @@
 ## 💡Lessons Learned
 - Wireframing and Prototyping in AdobeXD
 - Mobile-first design
-- SVG code in-line within HTML
+- SVG code in-line within HTML (and when to use src file reference instead)
+- SVG in place of heavy CSS
 - Advanced CSS properties
 - Deploying a Flask application on Heroku
 
