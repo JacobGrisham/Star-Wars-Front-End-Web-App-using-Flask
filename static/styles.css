@@ -8,6 +8,11 @@ body {
     font-family: 'Prompt', sans-serif;
     color: white;
     cursor: url(images/base/cursor.svg), auto;
+    overflow: hidden;
+}
+
+p {
+    margin: 0 0;
 }
 
 @import url(//db.onlinewebfonts.com/c/c2ff4837879a9b9bbca094b63bdb01c0?family=Aurebesh+AF);
@@ -35,7 +40,7 @@ footer {
 }
 
 .open-modal:hover {
-    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
     cursor: url(images/base/pointer.svg), pointer;
 }
 
@@ -77,7 +82,7 @@ footer {
 }
 
 .close-modal {
-    color: rgb(255, 255, 255);
+    color: rgb(150, 150, 150);
     background-color: rgb(10, 10, 10);
     font-size: 3rem;
     border: none;
@@ -90,6 +95,7 @@ footer {
 }
 
 .close-modal:hover {
+    color: rgb(255, 255, 255);
     cursor: url(images/base/pointer.svg), pointer;
 }
 
@@ -114,17 +120,20 @@ footer {
     cursor: url(images/base/pointer.svg), pointer;
 }
 
+.link:hover {
+    filter: drop-shadow(0px 0px 7px rgb(255, 255, 255));
+}
+
+.link:focus,
+.link:active {
+    animation: blink .2s 2;
+}
+
 @media only screen and (max-width: 768px) {
     .link {
         height: auto;
         width: 3rem;
     }
-}
-
-.link:hover {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 20s linear forwards;
 }
 
 .nav {
@@ -168,6 +177,24 @@ footer {
         top: 17%;
         left: 13%;
     }
+}
+
+/*--------------------------*/
+/* LOADING */
+/*--------------------------*/
+
+#loading {
+    text-align: center;
+    z-index: 1001;
+}
+
+canvas {
+    background: radial-gradient(#000, #111), #000;
+    position: fixed;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
 }
 
 /*--------------------------*/
@@ -275,12 +302,6 @@ video {
     cursor: url(images/base/pointer.svg), pointer;
 }
 
-.target-model {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .model {
     margin: 0 auto;
     width: 640px;
@@ -288,16 +309,39 @@ video {
 }
 
 .target {
-    animation: target infinite 15s linear;
+    position: absolute;
+    animation: rotate infinite 45s linear;
+    pointer-events: none;
+    height: auto;
+    width: 60rem;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1000px){
+    .target {
+        width: 50rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .target {
+        width: 45rem;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .target {
+        width: 35rem;
+    }
 }
 
 @keyframes rotate {
     from {
-        transform: rotate(0);
+        transform: rotate(0deg);
       }
-      to {
-        transform: rotate(359deg);
-      }
+    to {
+    transform: rotate(360deg);
+    }
 }
 
 .starship-title {
@@ -306,22 +350,22 @@ video {
     display: flex;
     position: absolute;
     top: 10%;
-    left: 0;
-    animation: moveInLeft 2s ease-in;
+    left: 2%;
+    animation: moveInLeft 14s ease-in;
 }
 
 @keyframes moveInLeft {
-  0%{
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80%{
-    opacity: 1;
-    transform: translateX(1rem);
-  }
-  100%{
-    transform: translate(0)
-  }
+    80%{
+       opacity: 0;
+       transform: translateX(-10rem);
+    }
+    90%{
+        opacity: 1;
+        transform: translateX(1rem);
+    }
+    100%{
+        transform: translate(0)
+    }
 
 }
 
@@ -339,7 +383,9 @@ video {
     bottom: 15%;
 }
 
-.icon:hover {
+.icon:hover,
+.icon:active,
+.icon:focus {
     background-image: url(images/base/small-grid.svg);
     border: 4px solid white;
     cursor: url(images/base/pointer.svg), pointer;
@@ -358,7 +404,30 @@ video {
 }
 
 .specs {
+    position: absolute;
+    left: 5%;
+    bottom: 4%;
     text-transform: uppercase;
+    font-size: 1.6rem;
+    width: 32rem;
+}
+
+@media only screen and (max-width: 1000px){
+    .specs {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .specs {
+        width: 19rem;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .specs {
+        display: none;
+    }
 }
 
 .symbol {

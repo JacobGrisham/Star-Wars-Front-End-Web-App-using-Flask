@@ -37,7 +37,7 @@
               <circle cx="28.5" cy="28.5" r="28.5" stroke="none"/>
               <circle cx="28.5" cy="28.5" r="28"/>
             </g>
-            <circle onclick="play('beep')" data-open="modal1" data-name="Ellipse 8" cx="22.5" cy="22.5" r="22.5" transform="translate(185 636)" fill="#fff"/>
+            <circle onclick="play('beep')" class="open-modal" data-open="modal1" data-name="Ellipse 8" cx="22.5" cy="22.5" r="22.5" transform="translate(185 636)" fill="rgb(150, 150, 150)"/>
           </g>
         </svg>
         <!-- Navigation Modal -->
@@ -132,5 +132,6 @@
         </div>
       </footer>
     </body>
+    {% block script %}{% endblock %}
     <script src="../static/js/index.js"></script>
 </html>
