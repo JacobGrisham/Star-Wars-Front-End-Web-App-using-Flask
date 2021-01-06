@@ -2,15 +2,13 @@ document.onreadystatechange = () => {
   if (document.readyState !== "complete") { 
       document.querySelector(".model-page").style.visibility = "hidden"; 
       document.querySelector("canvas").style.visibility = "visible"; 
-      document.querySelector("#loading").style.visibility = "visible"; 
   } else {
     setTimeout(() => {
-      document.querySelector("canvas").style.display = "none"; 
-      document.querySelector("#loading").style.display = "none"; 
+      document.querySelector("canvas").style.display = "none";  
       document.querySelector(".model-page").style.visibility = "visible";
-    }, 12000);
+    }, 3000);
   } 
-}; 
+};
 
 // Copyright (c) 2021 by yonatan (https://codepen.io/ybensira/pen/byYNBZ)
 
