@@ -1,4 +1,5 @@
 # [Star Wars 3D Models & Blueprints: Front End Web App using Flask](https://star-wars-3d-models-blueprints.herokuapp.com/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b3f48465461641bc8c5fd78b00af8655)](https://app.codacy.com/gh/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask?utm_source=github.com&utm_medium=referral&utm_content=JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask&utm_campaign=Badge_Grade)
 [![Updates](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 [![Python 3](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/python-3-shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 ### Homework from [Harvard's Introduction to Computer Science CS50 hosted on eDX](https://www.edx.org/course/cs50s-introduction-to-computer-science)
