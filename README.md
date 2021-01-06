@@ -1,10 +1,10 @@
 # [Star Wars 3D Models & Blueprints: Front End Web App using Flask](https://star-wars-3d-models-blueprints.herokuapp.com/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/38341d620d9b4105aeb417424d312475)](https://www.codacy.com/gh/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask&amp;utm_campaign=Badge_Grade)
 [![Updates](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 [![Python 3](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/python-3-shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 ### Homework from [Harvard's Introduction to Computer Science CS50 hosted on eDX](https://www.edx.org/course/cs50s-introduction-to-computer-science)
 ### 🎓 [Web Track](https://cs50.harvard.edu/x/2020/tracks/web/)
 - [Homepage](https://cs50.harvard.edu/x/2020/tracks/web/homepage/): Tasked to build a simple homepage using HTML, CSS, and JavaScript. I took this as an opportunity to go beyond this by practicing design and using advanced CSS mehtods.
-- I wrote all of the code in this repository, except index.js
 
 ## 💡Lessons Learned
 - Wireframing and Prototyping in AdobeXD
@@ -37,7 +37,6 @@ $ python application.py
 $ export FLASK_APP=application.py
 $ flask run
 ```
-- Note to self that there is a seperate branch `herokudeploy` for deploying files that are ignored when pushing to github.
 
 ## 📣 Acknowledgments
 - Star Wars created by Lucasfilm Ltd.
