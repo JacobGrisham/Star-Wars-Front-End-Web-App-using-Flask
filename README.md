@@ -1,4 +1,4 @@
-# [Star Wars 3D Models & Blueprints: Front End Web App using Flask](https://star-wars-3d-models-blueprints.herokuapp.com/)
+# Star Wars 3D Models & Blueprints: Front End Web App using Flask
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/38341d620d9b4105aeb417424d312475)](https://www.codacy.com/gh/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask&amp;utm_campaign=Badge_Grade)
 [![Updates](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
 [![Python 3](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/python-3-shield.svg)](https://pyup.io/repos/github/JacobGrisham/Star-Wars-Front-End-Web-App-using-Flask/)
@@ -12,6 +12,7 @@
 - Building Front-End from Design Specs
 - SVG code in-line within HTML (and when to use src file reference instead)
 - SVG in place of heavy CSS
+- SVG animations
 - Advanced CSS properties
 - Deploying a Flask application on Heroku
 - Git branch management
